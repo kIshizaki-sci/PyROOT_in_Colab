@@ -2,6 +2,7 @@
 
 [![License: LGPL v2.1+](https://img.shields.io/badge/License-LGPL%20v2.1+-blue.svg)](https://www.gnu.org/licenses/lgpl.html)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1FeIbfUvj4MayUf8He5lsKfnti-Pb7ytT/view?usp=sharing)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kIshizaki-sci/PyROOT_in_Colab/HEAD)
 
 
 ## Sample PyROOT notebook

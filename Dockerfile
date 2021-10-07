@@ -10,9 +10,12 @@ LABEL maintainer="Kohei ISHIZAKI <ishizaki_at_phi.phys.nagoya-u_dot_ac_dot_jp>"
 #########################################################
 #########################################################
 
-ARG NB_USER=phi
+ARG NB_USER="phi"
 ARG cern_root_version="v6-24-06"
-
+ARG NB_UID=1000
+ENV USER ${NB_USER}
+ENV NB_UID ${NB_UID}
+ENV HOME /home/${NB_USER}
 #########################################################
 #########################################################
 
@@ -77,22 +80,20 @@ RUN apt update && \
     apt clean; \
     rm -rf /var/lib/apt/lists/*;
 
-ARG NB_UID=1000
-ENV USER ${NB_USER}
-ENV NB_UID ${NB_UID}
-ENV HOME /home/${NB_USER}
-
-RUN adduser --disabled-password \
+RUN useradd --create-home -u $NB_UID -s /bin/bash ${NB_USER}; \
+    adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
-    ${NB_USER}
+    ${NB_USER}; \
+    adduser ${NB_USER} sudo;
+
 
 ###
 ###  Install Python packages
 ###
-
 USER ${NB_USER}
 COPY requirements.txt /tmp/
+ENV PATH=${HOME}/.local/bin:$PATH
 RUN pip3 install --user -I pip; \
     pip3 install --user -r /tmp/requirements.txt; \
     rm /tmp/requirements.txt; \
