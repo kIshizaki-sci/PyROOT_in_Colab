@@ -1,0 +1,114 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 64,
+			"theme": "base"
+		},
+		{
+			"name": "InfoLabel.less",
+			"size": 3563,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "NavigationList.less",
+			"size": 6432,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "SideNavigation.less",
+			"size": 3560,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ToolHeader.less",
+			"size": 2128,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ToolPage.less",
+			"size": 7464,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "css_variables.css",
+			"size": 3608,
+			"theme": "base"
+		},
+		{
+			"name": "css_variables.less",
+			"size": 234,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "css_variables.source.less",
+			"size": 84010,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "fonts/SAP-icons-TNT.json",
+			"size": 6484,
+			"theme": "base"
+		},
+		{
+			"name": "fonts/SAP-icons-TNT.ttf",
+			"size": 78848,
+			"theme": "base"
+		},
+		{
+			"name": "fonts/SAP-icons-TNT.woff",
+			"size": 39724,
+			"theme": "base"
+		},
+		{
+			"name": "fonts/SAP-icons-TNT.woff2",
+			"size": 29168,
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 17128,
+			"theme": "base"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 1502,
+			"theme": "base"
+		},
+		{
+			"name": "library.css",
+			"size": 17123,
+			"theme": "base"
+		},
+		{
+			"name": "library.less",
+			"size": 23914,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library.source.less",
+			"size": 408,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library_skeleton-RTL.css",
+			"size": 18185,
+			"theme": "base"
+		},
+		{
+			"name": "library_skeleton.css",
+			"size": 18180,
+			"theme": "base"
+		}
+	]
+}
