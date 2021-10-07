@@ -5,6 +5,8 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kIshizaki-sci/PyROOT_in_Colab/alpha-0.0.1)
 
 
+PyROOT_in_Colab enables you to use PyROOT in Google Colaboratory and C++ ROOT kernel jupyter notebook in Binder.
+
 ## Sample PyROOT notebook
 
 The binary files built from the CERN ROOT 6 are generated from the notebook build/Build_PyROOT.ipynb.
