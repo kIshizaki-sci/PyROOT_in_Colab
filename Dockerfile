@@ -126,7 +126,9 @@ ENV ROOTSYS=/opt/root \
     PATH=$ROOTSYS/bin:$PATH \
     PYTHONPATH=$ROOTSYS/lib:$PYTHONPATH \
     CLING_STANDARD_PCH=none
-RUN cp -r /opt/root/etc/notebook/kernels/root /usr/local/share/jupyter/kernels; \
+# [ERROR] cp: cannot create directory '/usr/local/share/jupyter/kernels': No such file or directory
+#RUN cp -r /opt/root/etc/notebook/kernels/root /usr/local/share/jupyter/kernels; \
+RUN cp -r /opt/root/etc/notebook/kernels/root ${HOME}/.local/share/jupyter/kernels; \
     jupyter notebook --generate-config; \
     echo /opt/root/lib >> /etc/ld.so.conf; \
     ldconfig;
