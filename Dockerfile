@@ -24,6 +24,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ENV DEBIAN_FRONTEND=noninteractive \
     SHELL=/bin/bash
 
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - ;
 RUN apt update && \
     apt install -y --install-recommends \
     curl \
@@ -94,8 +95,8 @@ RUN useradd --create-home -u $NB_UID -s /bin/bash ${NB_USER}; \
 USER ${NB_USER}
 COPY requirements.txt /tmp/
 ENV PATH=${HOME}/.local/bin:$PATH
-RUN pip3 install --user -I pip; \
-    pip3 install --user -r /tmp/requirements.txt; \
+RUN pip3 install --no-cache-dir --user -I pip; \
+    pip3 install --no-cache-dir --user -r /tmp/requirements.txt; \
     rm /tmp/requirements.txt; \
     jupyter server extension enable --user --py jupyterlab_git; \
     jupyter lab build; \
