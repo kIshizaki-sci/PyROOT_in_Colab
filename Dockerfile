@@ -10,7 +10,7 @@ LABEL maintainer="Kohei ISHIZAKI <ishizaki_at_phi.phys.nagoya-u_dot_ac_dot_jp>"
 #########################################################
 #########################################################
 
-ARG NB_USER="phi"
+ARG NB_USER=jovyan
 ARG cern_root_version="v6-24-06"
 ARG NB_UID=1000
 ENV USER ${NB_USER}
@@ -103,7 +103,6 @@ COPY requirements.txt /tmp/
 ENV PATH=${HOME}/.local/bin:$PATH
 RUN pip3 install --no-cache-dir --user -I pip; \
     pip3 install --no-cache-dir --user -r /tmp/requirements.txt; \
-    rm /tmp/requirements.txt; \
     jupyter server extension enable --user --py jupyterlab_git; \
     jupyter lab build; \
     python3 -m bash_kernel.install;
@@ -123,7 +122,7 @@ RUN cd /tmp && mkdir .root && cd .root; \
         -Dmathmore=OFF \ 
         -DCMAKE_INSTALL_PREFIX=${root_prefix} \ 
         ../root; \
-    cmake --build . -- install; \
+    cmake --build . -- install -j4; \
     echo "source ${root_prefix}/bin/thisroot.sh" >> ~/.bashrc; \
     rm -rd /tmp/.root;
 
