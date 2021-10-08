@@ -1,6 +1,6 @@
 # https://mybinder.readthedocs.io/en/latest/tutorials/dockerfile.html
 
-ARG BASE_CONTAINER=ubuntu:hirsute-20210917
+ARG BASE_CONTAINER=ubuntu:focal-20210921
 
 FROM $BASE_CONTAINER
 
