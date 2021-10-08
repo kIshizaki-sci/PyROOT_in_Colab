@@ -26,12 +26,13 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 RUN apt update && \
     apt install -y --install-recommends \
+    apt-utils \
     curl \
     git \
     sudo \
     wget; \
     curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - ;
-RUN apt update && apt upgrade && \
+RUN apt update && apt upgrade  -y --install-recommends && \
     apt install -y --install-recommends \
     cmake \
     ca-certificates \
