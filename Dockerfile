@@ -24,7 +24,13 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ENV DEBIAN_FRONTEND=noninteractive \
     SHELL=/bin/bash
 
-RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - ;
+RUN apt update && \
+    apt install -y --install-recommends \
+    curl \
+    git \
+    sudo \
+    wget; \
+    curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - ;
 RUN apt update && \
     apt install -y --install-recommends \
     curl \
