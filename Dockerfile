@@ -117,7 +117,7 @@ RUN cd /tmp && mkdir .root && cd .root; \
         -Dmathmore=OFF \ 
         -DCMAKE_INSTALL_PREFIX=${root_prefix} \ 
         ../root; \
-    cmake --build . -- install -j4; \
+    cmake --build . -- install -j3; \
     echo "source ${root_prefix}/bin/thisroot.sh" >> ~/.bashrc; \
     rm -rd /tmp/.root;
 
