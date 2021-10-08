@@ -1,6 +1,6 @@
 # https://mybinder.readthedocs.io/en/latest/tutorials/dockerfile.html
 
-ARG BASE_CONTAINER=ubuntu:focal-20210921
+ARG BASE_CONTAINER=ubuntu:hirsute-20210917
 
 FROM $BASE_CONTAINER
 
@@ -31,13 +31,8 @@ RUN apt update && \
     sudo \
     wget; \
     curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - ;
-RUN apt update && \
+RUN apt update && apt upgrade && \
     apt install -y --install-recommends \
-    curl \
-    git \
-    sudo \
-    wget; \
-    apt install -yq --no-install-recommends \
     cmake \
     ca-certificates \
     emacs \
