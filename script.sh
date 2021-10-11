@@ -1,9 +1,9 @@
 #!/bin/bash
 
-export ROOTSYS "/opt/root"
-export PATH "$ROOTSYS/bin:$PATH"
-export PYTHONPATH "$ROOTSYS/lib:$PYTHONPATH"
-export CLING_STANDARD_PCH "none"
+export ROOTSYS="/opt/root"
+export PATH="$ROOTSYS/bin:$PATH"
+export PYTHONPATH="$ROOTSYS/lib:$PYTHONPATH"
+export CLING_STANDARD_PCH="none"
 
 apt update
 apt install -yq --no-install-recommends \
