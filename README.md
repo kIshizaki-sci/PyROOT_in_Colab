@@ -20,4 +20,3 @@ Jupyter Lab embedded the C++ ROOT kernel and PyROOT are hosted at Binder.
 The source code of this repository is licensed under LGPL v2.1.
 This repository contain the binary files derived from [ROOT 6 v6-24-06](https://github.com/root-project/root/tree/v6-24-06), which is licensed under the LGPL v2.1. The source code of the ROOT used for generating the binary is archived at root-src directory.
 
-<meta name="google-site-verification" content="pGV0U6GZydM8QdIelSvh69ze0t96ElRqXyN9S2AY4xw" />
